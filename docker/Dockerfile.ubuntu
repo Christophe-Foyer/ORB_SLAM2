@@ -37,7 +37,7 @@ RUN apt-get update && apt-get install -y \
 && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN cd /opt && wget https://github.com/eigenteam/eigen-git-mirror/archive/3.2.10.tar.gz -O eigen3.tgz \
-&& tar zxvf eigen3.tgz && mv eigen-git-mirror-3.2.10 && cd eigen-git-mirror-3.2.10 \
+&& tar zxvf eigen3.tgz && cd eigen-git-mirror-3.2.10 \
 && mkdir build && cd build \
 && cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=RELEASE .. \
 && make install \
